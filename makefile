@@ -1,4 +1,4 @@
-OBJS = src/main.cpp src/Renderer.cpp
+OBJS = src/main.cpp src/Renderer.cpp src/Tetris.cpp src/Tetromino.cpp
 
 SRC_DIR = src
 CC = g++
