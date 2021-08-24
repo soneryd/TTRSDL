@@ -125,7 +125,7 @@ bool Renderer::init() {
 
 void Renderer::drawBoard() {
   SDL_RenderClear(renderer);
-
+  /* Draw board */
   int height = SCREEN_HEIGHT - 100;
   int boxDim = height/tetris->getDims().height;  
   for (int py = 0; py < tetris->getDims().height; py++) {
