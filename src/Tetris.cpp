@@ -55,10 +55,12 @@ void Tetris::finalPos() {
     }
   }
 
-  clearedLines += itemsToRemove.size();
-  if ((clearedLines+1) % 6 == 0) {
-    std::cout << "SPEED:" << speed << std::endl;
-    speed++;
+  if(itemsToRemove.size() > 0) {
+    if (itemsToRemove.size()+(clearedLines%5) >= 5) {
+      std::cout << "SPEED:" << speed << std::endl;
+      speed++;
+    }
+    clearedLines += itemsToRemove.size();    
   }
   // Flip vector so that we always remove higher higher val first
   std::reverse(itemsToRemove.begin(), itemsToRemove.end());
